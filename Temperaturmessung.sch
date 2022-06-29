@@ -1,0 +1,169 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 5650 3250 2    50   Input ~ 0
+TEMP_SCLK
+Text HLabel 5650 3550 2    50   Input ~ 0
+TEMP_CS
+Text HLabel 4200 3350 0    50   Input ~ 0
+T+
+Text HLabel 4200 3550 0    50   Input ~ 0
+T-
+$Comp
+L Sensor_Temperature:MAX31855KASA U?
+U 1 1 60AF9DCE
+P 5250 3450
+F 0 "U?" H 5650 3000 50  0000 C CNN
+F 1 "MAX31855KASA" H 5700 3100 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6250 3100 50  0001 C CIN
+F 3 "http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf" H 5250 3450 50  0001 C CNN
+	1    5250 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60AFAB67
+P 5250 3850
+F 0 "#PWR?" H 5250 3600 50  0001 C CNN
+F 1 "GND" H 5255 3677 50  0000 C CNN
+F 2 "" H 5250 3850 50  0001 C CNN
+F 3 "" H 5250 3850 50  0001 C CNN
+	1    5250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3550 4350 3550
+$Comp
+L Device:C_Small C?
+U 1 1 60AFB4FE
+P 4550 3450
+F 0 "C?" H 4642 3496 50  0000 L CNN
+F 1 "100n" H 4642 3405 50  0000 L CNN
+F 2 "" H 4550 3450 50  0001 C CNN
+F 3 "~" H 4550 3450 50  0001 C CNN
+	1    4550 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 4550 3350
+Wire Wire Line
+	4550 3350 4850 3350
+Connection ~ 4550 3550
+Wire Wire Line
+	4550 3550 4850 3550
+Wire Wire Line
+	4200 3350 4350 3350
+Wire Wire Line
+	4350 3350 4350 3250
+Connection ~ 4350 3350
+Wire Wire Line
+	4350 3350 4550 3350
+Wire Wire Line
+	4350 3550 4350 3650
+Connection ~ 4350 3550
+Wire Wire Line
+	4350 3550 4550 3550
+$Comp
+L Device:C_Small C?
+U 1 1 60AFBF3B
+P 4350 3750
+F 0 "C?" H 4442 3796 50  0000 L CNN
+F 1 "10n" H 4442 3705 50  0000 L CNN
+F 2 "" H 4350 3750 50  0001 C CNN
+F 3 "~" H 4350 3750 50  0001 C CNN
+	1    4350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60AFC2D1
+P 4350 3150
+F 0 "C?" H 4442 3196 50  0000 L CNN
+F 1 "10n" H 4442 3105 50  0000 L CNN
+F 2 "" H 4350 3150 50  0001 C CNN
+F 3 "~" H 4350 3150 50  0001 C CNN
+	1    4350 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3050 4350 2950
+Wire Wire Line
+	4350 2950 3850 2950
+Wire Wire Line
+	3850 2950 3850 3850
+$Comp
+L power:GND #PWR?
+U 1 1 60AFCAF0
+P 4350 3850
+F 0 "#PWR?" H 4350 3600 50  0001 C CNN
+F 1 "GND" H 4355 3677 50  0000 C CNN
+F 2 "" H 4350 3850 50  0001 C CNN
+F 3 "" H 4350 3850 50  0001 C CNN
+	1    4350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60AFCDBD
+P 3850 3850
+F 0 "#PWR?" H 3850 3600 50  0001 C CNN
+F 1 "GND" H 3855 3677 50  0000 C CNN
+F 2 "" H 3850 3850 50  0001 C CNN
+F 3 "" H 3850 3850 50  0001 C CNN
+	1    3850 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60AFCFC6
+P 5500 2750
+F 0 "C?" H 5592 2796 50  0000 L CNN
+F 1 "100n" H 5592 2705 50  0000 L CNN
+F 2 "" H 5500 2750 50  0001 C CNN
+F 3 "~" H 5500 2750 50  0001 C CNN
+	1    5500 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3050 5250 2650
+$Comp
+L power:GND #PWR?
+U 1 1 60AFD95D
+P 5500 2850
+F 0 "#PWR?" H 5500 2600 50  0001 C CNN
+F 1 "GND" H 5505 2677 50  0000 C CNN
+F 2 "" H 5500 2850 50  0001 C CNN
+F 3 "" H 5500 2850 50  0001 C CNN
+	1    5500 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2650 5500 2650
+Wire Wire Line
+	5250 2650 5250 2500
+Connection ~ 5250 2650
+$Comp
+L power:+3.3V #PWR?
+U 1 1 60AFFB3B
+P 5250 2500
+F 0 "#PWR?" H 5250 2350 50  0001 C CNN
+F 1 "+3.3V" H 5265 2673 50  0000 C CNN
+F 2 "" H 5250 2500 50  0001 C CNN
+F 3 "" H 5250 2500 50  0001 C CNN
+	1    5250 2500
+	1    0    0    -1  
+$EndComp
+Text HLabel 5650 3350 2    50   Input ~ 0
+TEMP_MISO
+$EndSCHEMATC

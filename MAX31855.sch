@@ -1,0 +1,206 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Temperature:MAX31855KASA U4
+U 1 1 618D4179
+P 5950 4000
+F 0 "U4" H 6300 3550 50  0000 C CNN
+F 1 "MAX31855KASA" H 6300 3650 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6950 3650 50  0001 C CIN
+F 3 "http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf" H 5950 4000 50  0001 C CNN
+	1    5950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 618D4CDE
+P 5950 4400
+F 0 "#PWR0111" H 5950 4150 50  0001 C CNN
+F 1 "GND" H 5955 4227 50  0000 C CNN
+F 2 "" H 5950 4400 50  0001 C CNN
+F 3 "" H 5950 4400 50  0001 C CNN
+	1    5950 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0112
+U 1 1 618D5195
+P 5950 3600
+F 0 "#PWR0112" H 5950 3450 50  0001 C CNN
+F 1 "+3V3" H 5965 3773 50  0000 C CNN
+F 2 "" H 5950 3600 50  0001 C CNN
+F 3 "" H 5950 3600 50  0001 C CNN
+	1    5950 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4100 6800 4100
+Wire Wire Line
+	6350 3900 6800 3900
+Wire Wire Line
+	6350 3800 6800 3800
+Text HLabel 6800 3800 2    50   Input ~ 0
+TEMP_SCLK
+Text HLabel 6800 3900 2    50   Input ~ 0
+TEMP_MISO
+Text HLabel 6800 4100 2    50   Input ~ 0
+TEMP_CS
+$Comp
+L power:+3V3 #PWR0113
+U 1 1 618D5CCA
+P 6900 2800
+F 0 "#PWR0113" H 6900 2650 50  0001 C CNN
+F 1 "+3V3" H 6915 2973 50  0000 C CNN
+F 2 "" H 6900 2800 50  0001 C CNN
+F 3 "" H 6900 2800 50  0001 C CNN
+	1    6900 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 618D6178
+P 6900 3200
+F 0 "#PWR0114" H 6900 2950 50  0001 C CNN
+F 1 "GND" H 6905 3027 50  0000 C CNN
+F 2 "" H 6900 3200 50  0001 C CNN
+F 3 "" H 6900 3200 50  0001 C CNN
+	1    6900 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C12
+U 1 1 618D6977
+P 6700 3000
+F 0 "C12" H 6792 3046 50  0000 L CNN
+F 1 "100n" H 6792 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6700 3000 50  0001 C CNN
+F 3 "~" H 6700 3000 50  0001 C CNN
+	1    6700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C13
+U 1 1 618D6C86
+P 7100 3000
+F 0 "C13" H 7192 3046 50  0000 L CNN
+F 1 "10n" H 7192 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7100 3000 50  0001 C CNN
+F 3 "~" H 7100 3000 50  0001 C CNN
+	1    7100 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2800 6900 2850
+Wire Wire Line
+	6900 2850 6700 2850
+Wire Wire Line
+	6700 2850 6700 2900
+Wire Wire Line
+	6900 2850 7100 2850
+Wire Wire Line
+	7100 2850 7100 2900
+Connection ~ 6900 2850
+Wire Wire Line
+	7100 3100 7100 3150
+Wire Wire Line
+	7100 3150 6900 3150
+Wire Wire Line
+	6900 3150 6900 3200
+Wire Wire Line
+	6700 3100 6700 3150
+Wire Wire Line
+	6700 3150 6900 3150
+Connection ~ 6900 3150
+$Comp
+L Device:C_Small C11
+U 1 1 618DA1B0
+P 5250 4000
+F 0 "C11" H 5342 4046 50  0000 L CNN
+F 1 "100n" H 5342 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5250 4000 50  0001 C CNN
+F 3 "~" H 5250 4000 50  0001 C CNN
+	1    5250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4100 5250 4100
+Wire Wire Line
+	5550 3900 5250 3900
+$Comp
+L Device:C_Small C9
+U 1 1 618DAE93
+P 4800 4300
+F 0 "C9" H 4892 4346 50  0000 L CNN
+F 1 "10n" H 4892 4255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4800 4300 50  0001 C CNN
+F 3 "~" H 4800 4300 50  0001 C CNN
+	1    4800 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 618DBC9E
+P 5100 4300
+F 0 "C10" H 5192 4346 50  0000 L CNN
+F 1 "10n" H 5192 4255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5100 4300 50  0001 C CNN
+F 3 "~" H 5100 4300 50  0001 C CNN
+	1    5100 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 618DC7D9
+P 5100 4400
+F 0 "#PWR0115" H 5100 4150 50  0001 C CNN
+F 1 "GND" H 5105 4227 50  0000 C CNN
+F 2 "" H 5100 4400 50  0001 C CNN
+F 3 "" H 5100 4400 50  0001 C CNN
+	1    5100 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 618DD19E
+P 4800 4400
+F 0 "#PWR0116" H 4800 4150 50  0001 C CNN
+F 1 "GND" H 4805 4227 50  0000 C CNN
+F 2 "" H 4800 4400 50  0001 C CNN
+F 3 "" H 4800 4400 50  0001 C CNN
+	1    4800 4400
+	1    0    0    -1  
+$EndComp
+Connection ~ 5250 4100
+Wire Wire Line
+	5250 3900 4800 3900
+Wire Wire Line
+	4800 3900 4800 4200
+Connection ~ 5250 3900
+Wire Wire Line
+	5250 4100 5100 4100
+Wire Wire Line
+	4800 3900 4600 3900
+Connection ~ 4800 3900
+Wire Wire Line
+	5100 4200 5100 4100
+Connection ~ 5100 4100
+Wire Wire Line
+	5100 4100 4600 4100
+Text HLabel 4600 3900 0    50   Input ~ 0
+TEMP_T+
+Text HLabel 4600 4100 0    50   Input ~ 0
+TEMP_T-
+$EndSCHEMATC

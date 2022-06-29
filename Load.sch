@@ -1,0 +1,143 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:D D1
+U 1 1 618D2C11
+P 5400 3450
+F 0 "D1" V 5354 3530 50  0000 L CNN
+F 1 "D" V 5445 3530 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 5400 3450 50  0001 C CNN
+F 3 "~" H 5400 3450 50  0001 C CNN
+	1    5400 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR013
+U 1 1 618D4A95
+P 5850 2950
+F 0 "#PWR013" H 5850 2800 50  0001 C CNN
+F 1 "+5V" H 5865 3123 50  0000 C CNN
+F 2 "" H 5850 2950 50  0001 C CNN
+F 3 "" H 5850 2950 50  0001 C CNN
+	1    5850 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4350 5850 4550
+$Comp
+L power:GND #PWR014
+U 1 1 618D4D8E
+P 5850 4650
+F 0 "#PWR014" H 5850 4400 50  0001 C CNN
+F 1 "GND" H 5855 4477 50  0000 C CNN
+F 2 "" H 5850 4650 50  0001 C CNN
+F 3 "" H 5850 4650 50  0001 C CNN
+	1    5850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 618D5013
+P 5150 4150
+F 0 "R6" V 4954 4150 50  0000 C CNN
+F 1 "10k" V 5045 4150 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5150 4150 50  0001 C CNN
+F 3 "~" H 5150 4150 50  0001 C CNN
+	1    5150 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 4150 5400 4150
+Wire Wire Line
+	5050 4150 4850 4150
+Text HLabel 4850 4150 0    50   Input ~ 0
+RELAY_SIG_IN
+$Comp
+L Device:R_Small R7
+U 1 1 618D624B
+P 5400 4350
+F 0 "R7" H 5341 4304 50  0000 R CNN
+F 1 "10k" H 5341 4395 50  0000 R CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 5400 4350 50  0001 C CNN
+F 3 "~" H 5400 4350 50  0001 C CNN
+	1    5400 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 4450 5400 4550
+Wire Wire Line
+	5400 4550 5850 4550
+Connection ~ 5850 4550
+Wire Wire Line
+	5850 4550 5850 4650
+Wire Wire Line
+	5400 4250 5400 4150
+Connection ~ 5400 4150
+Wire Wire Line
+	5400 4150 5550 4150
+Wire Wire Line
+	5400 3600 5400 3800
+Wire Wire Line
+	5400 3800 5850 3800
+Wire Wire Line
+	5850 3800 5850 3950
+Wire Wire Line
+	5850 3800 5850 3750
+Connection ~ 5850 3800
+Wire Wire Line
+	5850 3150 5850 3100
+Wire Wire Line
+	5400 3300 5400 3100
+Wire Wire Line
+	5400 3100 5850 3100
+Connection ~ 5850 3100
+Wire Wire Line
+	5850 3100 5850 2950
+Wire Wire Line
+	6250 3750 6250 3850
+Wire Wire Line
+	6250 3850 6750 3850
+Text HLabel 6750 3850 2    50   Input ~ 0
+AC_L_IN
+Wire Wire Line
+	6250 3150 6250 3050
+Wire Wire Line
+	6250 3050 6750 3050
+Text HLabel 6750 3050 2    50   Input ~ 0
+AC_L_OUT
+$Comp
+L Device:Q_NPN_Darlington_CBE Q1
+U 1 1 618D3695
+P 5750 4150
+F 0 "Q1" H 5940 4196 50  0000 L CNN
+F 1 "Q_NPN_Darlington_CBE" H 5940 4105 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5950 4250 50  0001 C CNN
+F 3 "~" H 5750 4150 50  0001 C CNN
+	1    5750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_A K1
+U 1 1 61875CD1
+P 6050 3450
+F 0 "K1" H 6380 3496 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_A" H 6380 3405 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPST_SANYOU_SRD_Series_Form_A" H 6400 3400 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 6050 3450 50  0001 C CNN
+	1    6050 3450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

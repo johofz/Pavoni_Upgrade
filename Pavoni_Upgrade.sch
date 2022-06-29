@@ -1,0 +1,302 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 5100 3150 1700 1050
+U 61841CDF
+F0 "ESP-12" 50
+F1 "ESP-12.sch" 50
+F2 "MISO" I L 5100 4000 50 
+F3 "MOSI" I L 5100 3900 50 
+F4 "SCLK" I L 5100 3800 50 
+F5 "RELAY_SIG_OUT" I R 6800 3700 50 
+F6 "ADC_IN" I L 5100 3500 50 
+F7 "CS" I L 5100 4100 50 
+$EndSheet
+$Sheet
+S 7800 3350 1200 700 
+U 618D0680
+F0 "Load" 50
+F1 "Load.sch" 50
+F2 "RELAY_SIG_IN" I L 7800 3700 50 
+F3 "AC_L_IN" I R 9000 3750 50 
+F4 "AC_L_OUT" I R 9000 3650 50 
+$EndSheet
+Wire Wire Line
+	7800 3700 6800 3700
+$Sheet
+S 2750 2700 1150 600 
+U 618DDA90
+F0 "PressureSensor" 50
+F1 "PressureSensor.sch" 50
+F2 "SENS_IN" I L 2750 3000 50 
+F3 "ADC_OUT" I R 3900 3000 50 
+$EndSheet
+Wire Wire Line
+	2950 4200 2200 4200
+Wire Wire Line
+	2950 4100 2100 4100
+Text Label 2400 4200 0    50   ~ 0
+AC_N_IN
+Wire Wire Line
+	9000 3650 9550 3650
+Text Label 9450 3650 2    50   ~ 0
+AC_L_OUT
+Wire Wire Line
+	2950 4300 2300 4300
+$Comp
+L Connector:Screw_Terminal_01x03 J3
+U 1 1 618E0002
+P 1850 4200
+F 0 "J3" H 1768 3875 50  0000 C CNN
+F 1 "AC_IN" H 1768 3966 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 1850 4200 50  0001 C CNN
+F 3 "~" H 1850 4200 50  0001 C CNN
+	1    1850 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J2
+U 1 1 618E120B
+P 1500 3000
+F 0 "J2" H 1418 2675 50  0000 C CNN
+F 1 "P_SENSOR" H 1418 2766 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 1500 3000 50  0001 C CNN
+F 3 "~" H 1500 3000 50  0001 C CNN
+	1    1500 3000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1700 3000 2750 3000
+Wire Wire Line
+	1700 3100 2300 3100
+Wire Wire Line
+	2300 3100 2300 3250
+Wire Wire Line
+	1700 2900 2300 2900
+Wire Wire Line
+	2300 2900 2300 2700
+$Comp
+L power:+5V #PWR011
+U 1 1 618E2F02
+P 2300 2700
+F 0 "#PWR011" H 2300 2550 50  0001 C CNN
+F 1 "+5V" H 2315 2873 50  0000 C CNN
+F 2 "" H 2300 2700 50  0001 C CNN
+F 3 "" H 2300 2700 50  0001 C CNN
+	1    2300 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 618E30CB
+P 2300 3250
+F 0 "#PWR012" H 2300 3000 50  0001 C CNN
+F 1 "GND" H 2305 3077 50  0000 C CNN
+F 2 "" H 2300 3250 50  0001 C CNN
+F 3 "" H 2300 3250 50  0001 C CNN
+	1    2300 3250
+	1    0    0    -1  
+$EndComp
+Text Label 2300 3000 0    50   ~ 0
+SENS_IN
+Wire Wire Line
+	3900 3000 4600 3000
+Wire Wire Line
+	4600 3000 4600 3500
+Wire Wire Line
+	4600 3500 5100 3500
+NoConn ~ 5100 3900
+Wire Wire Line
+	2100 4100 2100 4000
+Connection ~ 2100 4100
+Wire Wire Line
+	2100 4100 2050 4100
+Wire Wire Line
+	2200 4200 2200 4000
+Connection ~ 2200 4200
+Wire Wire Line
+	2200 4200 2050 4200
+Wire Wire Line
+	2300 4300 2300 4000
+Connection ~ 2300 4300
+Wire Wire Line
+	2300 4300 2050 4300
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 61864D01
+P 2100 4000
+F 0 "#FLG0101" H 2100 4075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 4173 50  0001 C CNN
+F 2 "" H 2100 4000 50  0001 C CNN
+F 3 "~" H 2100 4000 50  0001 C CNN
+	1    2100 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 618655CA
+P 2200 4000
+F 0 "#FLG0102" H 2200 4075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2200 4173 50  0001 C CNN
+F 2 "" H 2200 4000 50  0001 C CNN
+F 3 "~" H 2200 4000 50  0001 C CNN
+	1    2200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 618656AA
+P 2300 4000
+F 0 "#FLG0103" H 2300 4075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2300 4173 50  0001 C CNN
+F 2 "" H 2300 4000 50  0001 C CNN
+F 3 "~" H 2300 4000 50  0001 C CNN
+	1    2300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 6186B9A9
+P 9750 3650
+F 0 "J4" H 9830 3642 50  0000 L CNN
+F 1 "HEATER_AC_L" H 9830 3551 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 9750 3650 50  0001 C CNN
+F 3 "~" H 9750 3650 50  0001 C CNN
+	1    9750 3650
+	1    0    0    -1  
+$EndComp
+Text Label 2400 4300 0    50   ~ 0
+AC_PE_IN
+Text Label 2400 4100 0    50   ~ 0
+AC_L_IN
+$Sheet
+S 2950 3950 900  450 
+U 618DDAF2
+F0 "Power" 50
+F1 "Power.sch" 50
+F2 "AC_N_IN" I L 2950 4200 50 
+F3 "AC_L_IN" I L 2950 4100 50 
+F4 "AC_PE_IN" I L 2950 4300 50 
+$EndSheet
+$Sheet
+S 2700 4750 1150 600 
+U 618D3EA5
+F0 "MAX31855" 50
+F1 "MAX31855.sch" 50
+F2 "TEMP_SCLK" I R 3850 4950 50 
+F3 "TEMP_MISO" I R 3850 5050 50 
+F4 "TEMP_CS" I R 3850 5150 50 
+F5 "TEMP_T+" I L 2700 5000 50 
+F6 "TEMP_T-" I L 2700 5100 50 
+$EndSheet
+$Comp
+L Connector:Screw_Terminal_01x02 J5
+U 1 1 618E6888
+P 1850 5100
+F 0 "J5" H 1930 5092 50  0000 L CNN
+F 1 "TEMP_CONN" H 1930 5001 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 1850 5100 50  0001 C CNN
+F 3 "~" H 1850 5100 50  0001 C CNN
+	1    1850 5100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2050 5000 2700 5000
+Wire Wire Line
+	2700 5100 2050 5100
+Text Label 2250 5000 0    50   ~ 0
+T+
+Text Label 2250 5100 0    50   ~ 0
+T-
+Wire Wire Line
+	3850 4950 4550 4950
+Wire Wire Line
+	4550 4950 4550 3800
+Wire Wire Line
+	4550 3800 5100 3800
+Wire Wire Line
+	3850 5050 4650 5050
+Wire Wire Line
+	4650 5050 4650 4000
+Wire Wire Line
+	4650 4000 5100 4000
+Wire Wire Line
+	3850 5150 4750 5150
+Wire Wire Line
+	4750 5150 4750 4100
+Wire Wire Line
+	4750 4100 5100 4100
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 618FD224
+P 7600 5650
+F 0 "H1" H 7700 5696 50  0000 L CNN
+F 1 "MountingHole" H 7700 5605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 7600 5650 50  0001 C CNN
+F 3 "~" H 7600 5650 50  0001 C CNN
+	1    7600 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 618FE436
+P 7600 5850
+F 0 "H2" H 7700 5896 50  0000 L CNN
+F 1 "MountingHole" H 7700 5805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 7600 5850 50  0001 C CNN
+F 3 "~" H 7600 5850 50  0001 C CNN
+	1    7600 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 618FE641
+P 7600 6050
+F 0 "H3" H 7700 6096 50  0000 L CNN
+F 1 "MountingHole" H 7700 6005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 7600 6050 50  0001 C CNN
+F 3 "~" H 7600 6050 50  0001 C CNN
+	1    7600 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 618FE7F2
+P 7600 6250
+F 0 "H4" H 7700 6296 50  0000 L CNN
+F 1 "MountingHole" H 7700 6205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 7600 6250 50  0001 C CNN
+F 3 "~" H 7600 6250 50  0001 C CNN
+	1    7600 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3750 9150 3750
+Wire Wire Line
+	9150 3750 9150 4150
+Wire Wire Line
+	9150 4150 9600 4150
+Text Label 9600 4150 2    50   ~ 0
+AC_L_IN
+Wire Wire Line
+	9550 3750 9250 3750
+Wire Wire Line
+	9250 3750 9250 4050
+Wire Wire Line
+	9250 4050 9600 4050
+Text Label 9600 4050 2    50   ~ 0
+AC_N_IN
+$EndSCHEMATC
